@@ -3,11 +3,13 @@
 Plugin Name: DSGVO Youtube
 Plugin URI: https://www.ericmaechler.com/produkt/dsgvo-youtube/
 Description: Add your youtube videos as according to the GDPR / DSGVO regulations. Füge deine Videos gemäss den DSGVO Richtlinien ein. (<a href="options-general.php?page=QGA_dsgvoyoutube">Settings/Instruction</a>)
+Version: 1.5
 Author: Eric-Oliver Mächler
-Version: 1.4.7
 Author URI: https://www.ericmaechler.com
-Requires at least: 3.5
-Tested up to: 6.5
+Requires at least: 4.0
+Tested up to: 6.7.1
+Text Domain: dsgvo-youtube
+Domain Path: /languages
 */
 
 //dsgvo youtube mehrsprachig machen

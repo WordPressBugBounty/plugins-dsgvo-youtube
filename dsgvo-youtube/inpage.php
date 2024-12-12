@@ -10,14 +10,8 @@ function dsgvo_youtube_inpage_shortcode($atts, $content = null ) {
         'height'	=> '#',
     ), $atts );
 
-/*
-$array = explode("=",$values['videoid']);
-$youtubecode = ($array[1]);
-$images = $values['images'];
-$alt = $values['alt'];
-$width = $values['width'];
-$height = $values['height'];
-*/
+
+    
 $array = explode("=", $values['videoid']);
 
     // Überprüfen, ob das Array mindestens zwei Elemente enthält, bevor auf Index 1 zugegriffen wird

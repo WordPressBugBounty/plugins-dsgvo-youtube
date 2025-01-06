@@ -2,7 +2,7 @@
 Contributors: Annubis
 Donate link: http://www.ericmaechler.com
 Tags: DSGVO, GDPR, Youtube
-Version: 1.5
+Version: 1.5.1
 Requires at least: 4.0
 Tested up to: 6.7.1
 License: GPLv2 or later
@@ -66,8 +66,11 @@ Please send me a eMail to support@ericmaechler.com - then i can fix the Bug - th
 
 
 == Changelog ==
+= 1.5.1 =
+* Update lang file
+* add support link
 = 1.5 =
-Update for new wordpress version
+* Update for new wordpress version
 = 1.4.6 =
 Add Onpage Video loading (in Beta for testing)
 = 1.4.5 =

@@ -2,9 +2,9 @@
 Contributors: Annubis
 Donate link: http://www.ericmaechler.com
 Tags: DSGVO, GDPR, Youtube
-Version: 1.5.1
+Version: 1.5.2
 Requires at least: 4.0
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,8 @@ Please send me a eMail to support@ericmaechler.com - then i can fix the Bug - th
 
 
 == Changelog ==
+= 1.5.2 =
+* add shortcode validation
 = 1.5.1 =
 * Update lang file
 * add support link

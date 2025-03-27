@@ -9,17 +9,26 @@ function dsgvogdpryoutube() {
         			'url'   	=> '#',
         			'target'	=> '_self',
 					'images'	=> '#',
-					'alt'	=> '#',
-					'width'	=> '#',
+					'alt'		=> '#',
+					'width'		=> '#',
 					'height'	=> '#',
     			), $atts );
 					
 					$array = explode("=",$values['url']);
-					$youtubecode = ($array[1]);
+					//$youtubecode = ($array[1]);
+					$youtubecode = isset($array[1]) ? esc_attr($array[1]) : '';
+
 					$images = $values['images'];
-					$alt = $values['alt'];
-					$width = $values['width'];
-					$height = $values['height'];
+					//$alt = $values['alt'];
+					$alt = esc_attr( $values['alt'] );
+
+					//$width = $values['width'];
+					//$height = $values['height'];
+					
+					$width = (ctype_digit($values['width'])) ? esc_attr(intval($values['width'])) : '';
+					$height = (ctype_digit($values['height'])) ? esc_attr(intval($values['height'])) : '';
+
+
 
 					$images = preg_replace('/\sonerror=([^\s>]+)/i', '', $images);
 					$images = esc_url($images);

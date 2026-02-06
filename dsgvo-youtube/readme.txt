@@ -2,9 +2,10 @@
 Contributors: Annubis
 Donate link: http://www.ericmaechler.com
 Tags: DSGVO, GDPR, Youtube
-Version: 1.5.2
+Version: 1.6
+Stable tag: 1.6
 Requires at least: 4.0
-Tested up to: 6.7.2
+Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +43,7 @@ e.g.
 1. Unzip the Compressed file.
 2. Upload `dsgvo-youtube` to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in Dashboard.
-4. Read the Instructions and copy the code to your post or pages
+4. Read the Instructions (you can find it in WordPress Backend -> Settings -> DSGVO Youtube) and copy the code to your post or pages
 
 
 
@@ -54,20 +55,21 @@ Just follow this Steps
 1. Unzip the Compressed file.
 2. Upload `dsgvo-youtube` to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in Dashboard.
-4. Read the Instructions and copy the code to your post or pages
+4. Read the Instructions (you can find it in WordPress Backend -> Settings -> DSGVO Youtube) and copy the code to your post or pages
 
 = In which languages is this plugin available? =
-English & German
+English (USA & GB) & German (DE, AT, CH)
 
 = You found a Bug? =
 Please send me a eMail to support@ericmaechler.com - then i can fix the Bug - thank you
 
 
 
-
 == Changelog ==
+= 1.6 =
+* small update
 = 1.5.2 =
-* add shortcode validation
+* xss vulnerability has been reported and fixed
 = 1.5.1 =
 * Update lang file
 * add support link

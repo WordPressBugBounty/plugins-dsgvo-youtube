@@ -2,10 +2,10 @@
 Contributors: Annubis
 Donate link: http://www.ericmaechler.com
 Tags: DSGVO, GDPR, Youtube
-Version: 1.6
-Stable tag: 1.6
+Version: 1.7
+Stable tag: 1.7
 Requires at least: 4.0
-Tested up to: 6.8
+Tested up to: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,9 @@ Please send me a eMail to support@ericmaechler.com - then i can fix the Bug - th
 
 
 == Changelog ==
+= 1.7 =
+* (Inpage) Prevents the page from jumping to the top unintentionally
+* (Inpage) You can embed multiple videos on the same page
 = 1.6 =
 * small update
 = 1.5.2 =

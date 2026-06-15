@@ -11,51 +11,53 @@ function dsgvo_youtube_inpage_shortcode($atts, $content = null ) {
     ), $atts );
 
 
-    
+
 $array = explode("=", $values['videoid']);
 
-    // Überprüfen, ob das Array mindestens zwei Elemente enthält, bevor auf Index 1 zugegriffen wird
+// Überprüfen, ob das Array mindestens zwei Elemente enthält, bevor auf Index 1 zugegriffen wird
 $youtubecode = isset($array[1]) ? $array[1] : '';
-    
-$images = $values['images'];
-$alt = $values['alt'];
-$width = $values['width'];
-$height = $values['height'];
 
-$images = preg_replace('/\sonerror=([^\s>]+)/i', '', $images);
+$images = preg_replace('/\sonerror=([^\s>]+)/i', '', $values['images']);
 $images = esc_url($images);
-//esc_attr($values['url'])
+$alt = esc_attr($values['alt']);
+$width = esc_attr($values['width']);
+$height = esc_attr($values['height']);
+$videoid = esc_attr($values['videoid']);
+
+// eindeutige id pro shortcode-instanz, sonst funktioniert nur das erste video
+$uid = 'dsgvoyt_' . uniqid();
 
 
     ob_start(); ?>
-    <a href="#" id="loadVideoLink">
-    <img src="<?php echo esc_url($values['images']); ?>" alt="<?php echo esc_attr($values['alt']); ?>" width="<?php echo esc_attr($values['width']); ?>" height="<?php echo esc_attr($values['height']); ?>">
+    <a href="#" id="<?php echo $uid; ?>_link">
+    <img src="<?php echo $images; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>">
 </a>
-<div id="videoContainer" style="width: <?php echo esc_attr($values['width']); ?>px; height: <?php echo esc_attr($values['height']); ?>px;"></div>
+<div id="<?php echo $uid; ?>_container" style="width: <?php echo $width; ?>px; height: <?php echo $height; ?>px;"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var loadVideoLink = document.getElementById("loadVideoLink");
-            var videoContainer = document.getElementById("videoContainer");
+            var loadVideoLink = document.getElementById("<?php echo $uid; ?>_link");
+            var videoContainer = document.getElementById("<?php echo $uid; ?>_container");
 
-            loadVideoLink.addEventListener("click", function() {
-                // Erstellen Sie das YouTube-IFrame erst, wenn der Link geklickt wurde
+            if (!loadVideoLink || !videoContainer) return;
+
+            loadVideoLink.addEventListener("click", function(e) {
+                // verhindert das hochspringen zum seitenanfang
+                e.preventDefault();
+
+                // YouTube-iFrame erst beim klick erzeugen
                 var iframe = document.createElement("iframe");
-                iframe.setAttribute("width", "<?php echo esc_attr($values['width']); ?>");
-                iframe.setAttribute("height", "<?php echo esc_attr($values['height']); ?>");
-                iframe.setAttribute("src", "https://www.youtube.com/embed/<?php echo esc_attr($values['videoid']); ?>");
+                iframe.setAttribute("width", "<?php echo $width; ?>");
+                iframe.setAttribute("height", "<?php echo $height; ?>");
+                iframe.setAttribute("src", "https://www.youtube.com/embed/<?php echo $videoid; ?>");
                 iframe.setAttribute("frameborder", "0");
                 iframe.setAttribute("allowfullscreen", "");
+                iframe.setAttribute("title", "<?php echo $alt; ?>");
 
-                // Fügen Sie das IFrame zum Video-Container hinzu
+                // iFrame in den container einsetzen
                 videoContainer.appendChild(iframe);
 
-                // Deaktivieren Sie den Link, um das Video nur einmal zu laden
-                loadVideoLink.style.pointerEvents = "none";
-                loadVideoLink.style.textDecoration = "none";
-                loadVideoLink.style.color = "gray";
-
-                // Blenden Sie den Link aus
+                // thumbnail/link ausblenden
                 loadVideoLink.style.display = "none";
             });
         });

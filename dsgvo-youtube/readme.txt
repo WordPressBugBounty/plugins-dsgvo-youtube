@@ -2,8 +2,8 @@
 Contributors: Annubis
 Donate link: http://www.ericmaechler.com
 Tags: DSGVO, GDPR, Youtube
-Version: 1.7
-Stable tag: 1.7
+Version: 1.8
+Stable tag: 1.8
 Requires at least: 4.0
 Tested up to: 7.0
 License: GPLv2 or later
@@ -66,6 +66,8 @@ Please send me a eMail to support@ericmaechler.com - then i can fix the Bug - th
 
 
 == Changelog ==
+= 1.8 =
+* Debug Youtube Error 153
 = 1.7 =
 * (Inpage) Prevents the page from jumping to the top unintentionally
 * (Inpage) You can embed multiple videos on the same page

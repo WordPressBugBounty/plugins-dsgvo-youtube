@@ -41,11 +41,15 @@ function dsgvogdpryoutube() {
 					{
 					
 						if ($alt == '#'){
-							$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='esc_attr($values[url])' data-width='$width' data-height='$height'><img src='$images'></a></div>";
+							// esc_attr problem
+							//$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='esc_attr($values[url])' data-width='$width' data-height='$height'><img src='$images'></a></div>";
+							$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='" . esc_attr($values['url']) . "' data-width='$width' data-height='$height'><img src='$images'></a></div>";
 						}
 						else
 						{
-							$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='esc_attr($values[url])' data-width='$width' data-height='$height'><img src='$images' alt='$alt'></a></div>";
+							// esc_attr problem
+							//$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='esc_attr($values[url])' data-width='$width' data-height='$height'><img src='$images' alt='$alt'></a></div>";
+							$thumbnail = "<div class='dsgvoyoutube'><a data-fancybox href='" . esc_attr($values['url']) . "' data-width='$width' data-height='$height'><img src='$images' alt='$alt'></a></div>";
 						}
 						
 					}

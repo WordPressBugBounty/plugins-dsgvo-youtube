@@ -118,7 +118,6 @@
       // Iframe tag attributes
       attr: {
         scrolling: "auto",
-        referrerpolicy: "strict-origin-when-cross-origin",
       },
     },
 

@@ -108,16 +108,16 @@ function showForm_dsgvoyoutube()
 </script>';
   ?>
 
-  <div class="wrap">
-    <div class="dsgvoyoutube_red_container">
-      <h3><?php _e('Video replace thumbnail - no overlay (Beta)', 'dsgvo-youtube'); ?></h3>
-      <p><?php _e('if you embed this new shortcode, your video is no longer loaded in an overlay', 'dsgvo-youtube'); ?></p>
-      <p><?php _e('after you click on the thumbnail, the image will disappear and be replaced by the video', 'dsgvo-youtube'); ?></p>
-      <strong><?php _e('Use this Code:', 'dsgvo-youtube'); ?></strong> <code>[dsgvo-youtube-inpage videoid=&quot;mULSj3iKXTs&quot; images=&quot;https://www.chefblogger.me/wp-content/uploads/2015/10/I-can-do-it.jpg&quot; alt=&quot;my summer video&quot; width=&quot;600&quot; height=&quot;400&quot;][/dsgvo-youtube-inpage]</code>
+  <div class="wrap dsgvoyoutube_box">
 
-      <p><?php _e('this features is under beta test - If you finde a bug, please report it here: <a href="https://support.ericmaechler.com/" target="_blank">Support</a>', 'dsgvo-youtube'); ?></p>
+    <h3><?php _e('Video replace thumbnail - no overlay', 'dsgvo-youtube'); ?></h3>
+    <p><?php _e('if you embed this new shortcode, your video is no longer loaded in an overlay', 'dsgvo-youtube'); ?></p>
+    <p><?php _e('after you click on the thumbnail, the image will disappear and be replaced by the video', 'dsgvo-youtube'); ?></p>
+    <strong><?php _e('Use this Code:', 'dsgvo-youtube'); ?></strong> <code>[dsgvo-youtube-inpage videoid=&quot;mULSj3iKXTs&quot; images=&quot;https://www.chefblogger.me/wp-content/uploads/2015/10/I-can-do-it.jpg&quot; alt=&quot;my summer video&quot; width=&quot;600&quot; height=&quot;400&quot;][/dsgvo-youtube-inpage]</code>
 
-    </div>
+    <p><?php _e('this features is under beta test - If you finde a bug, please report it here: <a href="https://support.ericmaechler.com/" target="_blank">Support</a>', 'dsgvo-youtube'); ?></p>
+
+
   </div>
 
 
